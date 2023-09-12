@@ -15,13 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Login
-      uses: docker/login-action@v1
+      uses: docker/login-action@v3
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GHCR_TOKEN }}
     - name: Login
-      uses: docker/login-action@v1
+      uses: docker/login-action@v3
       with:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.DHUB_TOKEN }}
